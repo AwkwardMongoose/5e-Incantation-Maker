@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/scripts.js" defer=""></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>5e Spell Incantations</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th style="width:20px">
+                &nbsp;
+            </th>
+            <th style="width:50px">
+                Level
+            </th>
+            <th style="width:150px">
+                Name
+            </th>
+            <th style="width:100px">
+                Duration
+            </th>
+            <th style="width:100px">
+                Shape
+            </th>
+            <th style="width:100px">
+                School
+            </th>
+            <th style="width:100px">
+                Action
+            </th>
+            <th style="width:100px">
+                Descriptor 1
+            </th>
+            <th style="width:100px">
+                Descriptor 2
+            </th>
+            <th style="width:100px">
+                Descriptor 3
+            </th>
+            <th style="width:20px">
+                &nbsp;
+            </th>
+        </tr>
+        <tr class="firstrow">
+            <td class="edgecell"></td>
+            <td>
+                <select id="level">
+                    <option value="0">0-3</option>
+                    <option value="1">4-6</option>
+                    <option value="2">7-9</option>
+                </select>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                <select id="duration">
+                    <option value="0">Instant</option>
+                    <option value="1">Lasting</option>
+                    <option value="2">Concentration</option>
+                </select>
+            </td>
+            <td>
+                <select id="shape">
+                    <option value="0">Touch</option>
+                    <option value="1">Creature</option>
+                    <option value="2">Self</option>
+                    <option value="3">Object</option>
+                    <option value="4">Radius</option>
+                    <option value="5">Cone</option>
+                    <option value="6">Line</option>
+                    <option value="7">Cube</option>
+                </select>
+            </td>
+            <td>
+                <select id="school" value="">
+                    <option value="abju" selected>Abjuration</option>
+                    <option value="evoc">Evocation</option>
+                    <option value="tran">Transmutation</option>
+                    <option value="conj">Conjuration</option>
+                    <option value="illu">Illusion</option>
+                    <option value="ench">Enchantment</option>
+                    <option value="divi">Divination</option>
+                    <option value="necr">Necromancy</option>
+                </select>
+            </td>
+            <td>
+                <select class="actionselector" id="action">
+                    <option id="protectopt" class="abjuselector visible" value="0">Protect</option>
+                    <option id="dispelopt" class="abjuselector visible" value="1">Dispel</option>
+                    <option id="evokeopt" class="evocselector" value="2">Evoke</option>
+                    <option id="conjureopt" class="conjselector" value="3">Conjure</option>
+                    <option id="summonopt" class="conjselector" value="4">Summon</option>
+                    <option id="transmuteopt" class="transelector" value="5">Transmute</option>
+                    <option id="augmentopt" class="transelector" value="6">Augment</option>
+                    <option id="illuseopt" class="illuselector" value="7">Illuse</option>
+                    <option id="enchantopt" class="enchselector" value="8">Enchant</option>
+                    <option id="charmopt" class="enchselector" value="9">Charm</option>
+                    <option id="divineopt" class="diviselector" value="10">Divine</option>
+                    <option id="necromanseopt" class="necrselector" value="11">Necromanse</option>
+                </select>
+            </td>
+            <td>
+                <select class="descriptorselector" id="desc1">
+                    <option value="0">-------------------</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Forms]</option>
+                    <option value="1">Ray</option>
+                    <option value="2">Bolt</option>
+                    <option value="3">Blade</option>
+                    <option value="4">Ball</option>
+                    <option value="5">Cloud</option>
+                    <option value="6">Phantasm</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Elements]</option>
+                    <option value="7">Magic</option>
+                    <option value="8">Fire</option>
+                    <option value="9">Cold/Ice</option>
+                    <option value="10">Lightning</option>
+                    <option value="11">Force</option>
+                    <option value="12">Thunder</option>
+                    <option value="13">Mental/Mind</option>
+                    <option value="14">Positive</option>
+                    <option value="15">Negative</option>
+                    <option value="16">Air</option>
+                    <option value="17">Water</option>
+                    <option value="18">Light</option>
+                    <option value="19">Dark</option>
+                    <option value="20">Attack</option>
+                    <option value="21">Bind</option>
+                    <option value="22">Smoke</option>
+                    <option value="23">Death</option>
+                    <option value="24">Magma</option>
+                    <option value="25">Steam/Fog</option>
+                    <option value="26">Chaos</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Misc.]</option>
+                    <option value="27">Protect</option>
+                    <option value="28">Manipulate</option>
+                    <option value="29">Jump</option>
+                    <option value="30">Flight</option>
+                    <option value="31">Travel</option>
+                    <option value="32">Walk</option>
+                    <option value="33">Fast</option>
+                    <option value="34">Slow</option>
+                    <option value="35">Sight</option>
+                    <option value="36">Sound</option>
+                    <option value="37">Speech</option>
+                    <option value="38">Many</option>
+                    <option value="39">Plane</option>
+                    <option value="40">Self</option>
+                    <option value="41">Body</option>
+                    <option value="42">Creature</option>
+                    <option value="43">Enemy</option>
+                    <option value="44">Friend</option>
+                    <option value="45">Object</option>
+                </select>
+            </td>
+            <td>
+                <select class="descriptorselector" id="desc2">
+                    <option value="0">-------------------</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Forms]</option>
+                    <option value="1">Ray</option>
+                    <option value="2">Bolt</option>
+                    <option value="3">Blade</option>
+                    <option value="4">Ball</option>
+                    <option value="5">Cloud</option>
+                    <option value="6">Phantasm</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Elements]</option>
+                    <option value="7">Magic</option>
+                    <option value="8">Fire</option>
+                    <option value="9">Cold/Ice</option>
+                    <option value="10">Lightning</option>
+                    <option value="11">Force</option>
+                    <option value="12">Thunder</option>
+                    <option value="13">Mental</option>
+                    <option value="14">Positive</option>
+                    <option value="15">Negative</option>
+                    <option value="16">Air</option>
+                    <option value="17">Water</option>
+                    <option value="18">Light</option>
+                    <option value="19">Dark</option>
+                    <option value="20">Attack</option>
+                    <option value="21">Bind</option>
+                    <option value="22">Smoke</option>
+                    <option value="23">Death</option>
+                    <option value="24">Magma</option>
+                    <option value="25">Steam/Fog</option>
+                    <option value="26">Chaos</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Misc.]</option>
+                    <option value="27">Protect</option>
+                    <option value="28">Manipulate</option>
+                    <option value="29">Jump</option>
+                    <option value="30">Flight</option>
+                    <option value="31">Travel</option>
+                    <option value="32">Walk</option>
+                    <option value="33">Fast</option>
+                    <option value="34">Slow</option>
+                    <option value="35">Sight</option>
+                    <option value="36">Sound</option>
+                    <option value="37">Speech</option>
+                    <option value="38">Many</option>
+                    <option value="39">Plane</option>
+                    <option value="40">Self</option>
+                    <option value="41">Body</option>
+                    <option value="42">Creature</option>
+                    <option value="43">Enemy</option>
+                    <option value="44">Friend</option>
+                    <option value="45">Object</option>
+                </select>
+            </td>
+            <td>
+                <select class="descriptorselector" id="desc3">
+                    <option value="0">-------------------</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Forms]</option>
+                    <option value="1">Ray</option>
+                    <option value="2">Bolt</option>
+                    <option value="3">Blade</option>
+                    <option value="4">Ball</option>
+                    <option value="5">Cloud</option>
+                    <option value="6">Phantasm</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Elements]</option>
+                    <option value="7">Magic</option>
+                    <option value="8">Fire</option>
+                    <option value="9">Cold/Ice</option>
+                    <option value="10">Lightning</option>
+                    <option value="11">Force</option>
+                    <option value="12">Thunder</option>
+                    <option value="13">Mental</option>
+                    <option value="14">Positive</option>
+                    <option value="15">Negative</option>
+                    <option value="16">Air</option>
+                    <option value="17">Water</option>
+                    <option value="18">Light</option>
+                    <option value="19">Dark</option>
+                    <option value="20">Attack</option>
+                    <option value="21">Bind</option>
+                    <option value="22">Smoke</option>
+                    <option value="23">Death</option>
+                    <option value="24">Magma</option>
+                    <option value="25">Steam/Fog</option>
+                    <option value="26">Chaos</option>
+                    <option class="selectSep" disabled></option>
+                    <option class="selectCat" disabled>[Misc.]</option>
+                    <option value="27">Protect</option>
+                    <option value="28">Manipulate</option>
+                    <option value="29">Jump</option>
+                    <option value="30">Flight</option>
+                    <option value="31">Travel</option>
+                    <option value="32">Walk</option>
+                    <option value="33">Fast</option>
+                    <option value="34">Slow</option>
+                    <option value="35">Sight</option>
+                    <option value="36">Sound</option>
+                    <option value="37">Speech</option>
+                    <option value="38">Many</option>
+                    <option value="39">Plane</option>
+                    <option value="40">Self</option>
+                    <option value="41">Body</option>
+                    <option value="42">Creature</option>
+                    <option value="43">Enemy</option>
+                    <option value="44">Friend</option>
+                    <option value="45">Object</option>
+                </select>
+            </td>
+            <td class="edgecell"></td>
+        </tr>
+        <tr class="secondrow">
+            <td class="edgecell"></td>
+            <td style="border:1px solid black" colspan="9">
+                <span class="output" id="output"></span>
+            </td>
+            <td class="edgecell"></td>
+        </tr>
+        <tfoot>
+            <tr class="footer">
+                <td style="border:1px solid black" colspan="11"></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
